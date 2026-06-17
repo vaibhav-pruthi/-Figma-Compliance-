@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance for Research Analysts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Mobile / Tablet overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <a href="#" class="logo" aria-label="Home">
+          <img src="assets/images/Logo.png" alt="Logo" class="logo__img">
+        </a>
+        <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M8 8L24 24M24 8L8 24" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-menu__nav">
+        <a href="#" class="mobile-menu__link mobile-menu__link--active">
+          <img src="assets/images/Home.png" alt="" class="mobile-menu__icon">
+          Home
+        </a>
+        <a href="#" class="mobile-menu__link">
+          <img src="assets/images/AboutUs.png" alt="" class="mobile-menu__icon">
+          About Us
+        </a>
+        <a href="#" class="mobile-menu__link">
+          <img src="assets/images/Our Services.png" alt="" class="mobile-menu__icon">
+          Our Services
+        </a>
+        <a href="#" class="mobile-menu__link">
+          <img src="assets/images/Pricing.png" alt="" class="mobile-menu__icon">
+          Pricing
+        </a>
+        <a href="#" class="mobile-menu__link">
+          <img src="assets/images/FAQ.png" alt="" class="mobile-menu__icon">
+          FAQ
+        </a>
+        <a href="#" class="mobile-menu__link">
+          <img src="assets/images/Contact.png" alt="" class="mobile-menu__icon">
+          Contact
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="logo" aria-label="Home">
+        <img src="assets/images/Logo.png" alt="Logo" class="logo__img">
+      </a>
+
+      <nav class="navbar__nav" aria-label="Main navigation">
+        <a href="#" class="navbar__link navbar__link--active">Home</a>
+        <a href="#" class="navbar__link">About us</a>
+        <a href="#" class="navbar__link">Our Services</a>
+        <a href="#" class="navbar__link">Pricing</a>
+        <a href="#" class="navbar__link">FAQ</a>
+        <a href="#" class="navbar__link">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--primary btn--contact">
+          <img src="assets/images/Contact-icon.png" alt="" class="btn__icon">
+          Contact us
+        </a>
+        <button class="navbar__menu-btn" id="menuOpen" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/images/Menu.png" alt="Open menu" class="menu-icon-img">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__bg-blur" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Simplifying <span class="text-highlight text-highlight--underlined">Compliance<img src="assets/images/underline-Vector.png" alt="" class="hero__underline"></span> for Research Analysts
+          </h1>
+          <p class="hero__description">
+            Stay focused on your insights—we'll handle the compliance. Our expert solutions ensure your research practices meet every regulatory requirement with confidence and ease
+          </p>
+          <ul class="hero__features">
+            <li class="hero__feature">
+              <img src="assets/images/check-sign.png" alt="Check" class="hero__check-img">
+              End-to-end compliance support
+            </li>
+            <li class="hero__feature">
+              <img src="assets/images/check-sign.png" alt="Check" class="hero__check-img">
+              Regulatory filings made simple
+            </li>
+            <li class="hero__feature">
+              <img src="assets/images/check-sign.png" alt="Check" class="hero__check-img">
+              Tailored solutions for independent analysts &amp; firms
+            </li>
+          </ul>
+          <div class="hero__buttons">
+            <a href="#" class="btn btn--primary btn--fixed">Get Started</a>
+            <a href="#" class="btn btn--outline">Book a Consultation</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <img src="assets/images/Vector1.png" alt="" class="hero__decoration-chevron">
+          <img src="assets/images/Banner Image.png" alt="Simplifying Compliance" class="hero__banner-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="compliance">
+      <div class="container compliance__inner">
+        <div class="compliance__header">
+          <h2 class="compliance__title">
+            Why <span class="text-highlight">Compliance Matters</span> for Research Analysts
+            <img src="assets/images/Vector2.png" alt="" class="compliance__title-arrow">
+          </h2>
+          <p class="compliance__description">
+            In today's regulatory environment, even a small oversight can lead to penalties, reputational risks, and loss of client trust. We help Research Analysts and firms navigate complex compliance requirements so they can focus on delivering high-quality research without worry.
+          </p>
+        </div>
+
+        <div class="compliance__body">
+          <div class="compliance__illustration" aria-hidden="true">
+            <img src="assets/images/Section2-Image.png" alt="Compliance dashboard" class="compliance__illustration-img">
+            <img src="assets/images/Vector1.png" alt="" class="compliance__illustration-chevron">
+          </div>
+
+          <div class="compliance__cards">
+            <article class="feature-card">
+              <img src="assets/images/Regulatory Clarity.png" alt="" class="feature-card__icon-img">
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">Regulatory Clarity</h3>
+                <p class="feature-card__text">We decode complex compliance rules into simple, actionable steps.</p>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <img src="assets/images/Hassle-Free Filings Clarity.png" alt="" class="feature-card__icon-img">
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">Hassle-Free Filings Clarity</h3>
+                <p class="feature-card__text">From registration to ongoing reporting—we manage it end-to-end.</p>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <img src="assets/images/Risk Protection.png" alt="" class="feature-card__icon-img">
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">Risk Protection</h3>
+                <p class="feature-card__text">Stay ahead of audits, inspections, and compliance gaps with proactive support.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
