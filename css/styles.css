@@ -17,7 +17,7 @@
   --font-primary: 'Roboto', sans-serif;
   --font-rating: 'Inter', sans-serif;
 
-  --container-max: 1200px; /* Aligned for standard desktop viewports */
+  --container-max: 1240px; /* Exact container width for 1440px figma page (1440 - 200 padding) */
   --container-padding-desktop: 100px;
   --container-padding-tablet: 40px;
   --container-padding-mobile: 20px;
@@ -42,7 +42,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden; /* Prevent horizontal scrolling at all costs */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
@@ -109,6 +109,7 @@ button {
   line-height: normal;
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
 }
 
 .btn--primary {
@@ -154,8 +155,8 @@ button {
 
 .logo__img {
   display: block;
-  width: 158px;
-  height: 50px;
+  width: 158.71px;
+  height: 58px;
   object-fit: contain;
 }
 
@@ -185,11 +186,13 @@ button {
 }
 
 .navbar__link {
-  font-size: 20px; /* Title typography */
+  font-size: 18px; /* Body Medium spec */
   font-weight: 500;
+  line-height: 21px;
   color: var(--color-text-muted);
   transition: color 0.2s;
-  padding: 8px 0;
+  padding: 10px;
+  text-transform: capitalize;
 }
 
 .navbar__link:hover,
@@ -201,6 +204,10 @@ button {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.btn--contact {
+  width: 169px; /* Precise Figma width */
 }
 
 .navbar__menu-btn {
@@ -290,11 +297,12 @@ button {
   align-items: center;
   gap: 16px;
   padding: 12px;
-  font-size: 19px; /* Mobile Title */
+  font-size: 19px; /* Mobile Title link */
   font-weight: 500;
   color: var(--color-text-muted);
   border-radius: var(--radius-sm);
   transition: all 0.2s ease;
+  text-transform: capitalize;
 }
 
 .mobile-menu__link:hover,
@@ -316,7 +324,8 @@ button {
   position: relative;
   background: var(--color-bg-light);
   overflow: hidden;
-  padding-top: var(--navbar-height-desktop);
+  height: 829px; /* Exact Figma Section height */
+  width: 100%;
 }
 
 .hero__bg-blur {
@@ -325,28 +334,33 @@ button {
   height: 974px;
   left: -368px;
   top: 212px;
-  background: var(--color-blur);
+  background: #F5F6FA;
   border-radius: 50%;
-  filter: blur(250px);
+  filter: blur(125px); /* Exact Figma Ellipse 8 Blur */
   pointer-events: none;
   z-index: 1;
 }
 
 .hero__inner {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(auto, 606px) 1.1fr;
-  align-items: center;
-  gap: 60px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  width: 1440px;
+  height: 829px;
+  margin: 0 auto;
+  padding-left: 72px;   /* Exact Figma Group 11 left offset */
+  padding-right: 22.87px; /* Leftover right margin */
+  display: flex;
+  align-items: flex-start;
   z-index: 2;
 }
 
 .hero__content {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 26px; /* Exact Figma Frame 249 Gap */
+  width: 606px;
+  height: 651px;
+  margin-top: 180px; /* Exact Figma Group 11 top offset */
+  position: relative;
 }
 
 .hero__title {
@@ -355,6 +369,10 @@ button {
   font-weight: 700;
   line-height: 85px;
   color: var(--color-text);
+  width: 620px;
+  height: 255px;
+  text-transform: capitalize;
+  position: relative;
 }
 
 .text-highlight--underlined {
@@ -365,7 +383,7 @@ button {
 .hero__underline {
   position: absolute;
   left: 0;
-  bottom: -12px;
+  bottom: -8px;
   width: 100%;
   height: auto;
   pointer-events: none;
@@ -375,22 +393,28 @@ button {
   font-size: 18px; /* Body Regular */
   font-weight: 400;
   line-height: 32px;
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  width: 606px;
+  height: 96px;
+  text-transform: capitalize;
 }
 
 .hero__features {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px; /* Exact Figma Frame 1151 Gap */
+  width: 466px;
+  height: 176px;
 }
 
 .hero__feature {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 18px; /* Body Regular / Medium */
+  gap: 16px; /* Exact Figma bullet gap */
+  font-size: 18px; /* Body Regular */
   line-height: 32px;
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  text-transform: capitalize;
 }
 
 .hero__check-img {
@@ -402,24 +426,26 @@ button {
 .hero__buttons {
   display: flex;
   align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 10px;
+  gap: 24px; /* Exact Figma Frame 32 Gap */
+  width: 450px;
+  height: 46px;
 }
 
 /* Hero Visual */
 .hero__visual {
-  position: relative;
+  position: absolute;
+  left: 677.87px; /* Exact Figma Group 21 left offset */
+  top: 156px;    /* Exact Figma Group 21 top offset */
+  width: 739.13px;
+  height: 607px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .hero__banner-img {
   width: 100%;
-  height: auto;
-  max-width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -438,7 +464,7 @@ button {
    ========================================================================== */
 .compliance {
   background: var(--color-white);
-  padding: 100px 0;
+  padding: 50px 0; /* Vertical padding 50px matching the figma 50px 100px spec */
   position: relative;
   overflow: hidden;
 }
@@ -446,14 +472,18 @@ button {
 .compliance__inner {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 36px; /* Exact Figma gap between header and body */
+  width: 100%;
 }
 
 .compliance__header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 33px; /* Exact Figma gap between title and desc */
+  width: 100%;
+  height: 140px;
   position: relative;
 }
 
@@ -462,16 +492,19 @@ button {
   font-weight: 600;
   line-height: 70px;
   color: var(--color-text);
-  position: relative;
+  width: 603.5px;
+  height: 140px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
 }
 
 .compliance__title-arrow {
   position: absolute;
-  left: 48%;
-  top: 80%;
+  left: calc(50% - 18px); /* Centered in the 33px gap between columns */
+  top: 30px;
   width: 36px;
   height: 129px;
-  transform: translateX(-50%);
   pointer-events: none;
   z-index: 10;
 }
@@ -480,35 +513,41 @@ button {
   font-size: 18px; /* Body Regular */
   font-weight: 400;
   line-height: 32px;
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  width: 603.5px;
+  height: 128px;
+  text-transform: capitalize;
 }
 
 .compliance__body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 60px;
+  gap: 52px; /* Exact Figma gap between illustration and cards */
+  width: 100%;
+  height: 594px;
 }
 
 .compliance__illustration {
   position: relative;
-  width: 100%;
+  width: 594px;
+  height: 594px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .compliance__illustration-img {
   width: 100%;
-  height: auto;
-  max-width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 .compliance__illustration-chevron {
   position: absolute;
   bottom: -20px;
-  left: -20px;
+  left: -40px;
   width: 138px;
   height: auto;
   z-index: 3;
@@ -519,6 +558,9 @@ button {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 594px;
+  height: 594px;
+  justify-content: center;
 }
 
 .feature-card {
@@ -556,6 +598,7 @@ button {
   font-weight: 600;
   line-height: 32px;
   color: var(--color-text);
+  text-transform: capitalize;
 }
 
 .feature-card__text {
@@ -563,6 +606,77 @@ button {
   font-weight: 400;
   line-height: 32px;
   color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+/* ==========================================================================
+   Intermediate Desktop (max-width: 1399px)
+   ========================================================================== */
+@media (max-width: 1399px) and (min-width: 1025px) {
+  .hero {
+    height: auto;
+  }
+  .hero__bg-blur {
+    width: 700px;
+    height: 700px;
+  }
+  .hero__inner {
+    width: 100%;
+    height: auto;
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+  .hero__content {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero__title {
+    width: 100%;
+    height: auto;
+    font-size: 54px;
+    line-height: 72px;
+  }
+  .hero__description {
+    width: 100%;
+    height: auto;
+  }
+  .hero__features {
+    width: 100%;
+    height: auto;
+  }
+  .hero__visual {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  .compliance__header {
+    height: auto;
+    gap: 30px;
+  }
+  .compliance__title,
+  .compliance__description {
+    width: 50%;
+    height: auto;
+  }
+  .compliance__title-arrow {
+    display: none;
+  }
+  .compliance__body {
+    height: auto;
+    gap: 40px;
+  }
+  .compliance__illustration,
+  .compliance__cards {
+    width: 50%;
+    height: auto;
+  }
 }
 
 /* ==========================================================================
@@ -594,22 +708,70 @@ button {
   .hero__title {
     font-size: 54px; /* Tablet H1 */
     line-height: 75px;
+    width: 100%;
+    height: auto;
   }
 
   .compliance__title {
     font-size: 46px; /* Tablet H2 */
     line-height: 60px;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    height: auto;
   }
 
   .hero__inner {
+    width: 100%;
+    height: auto;
+    display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 40px;
-    padding-top: 80px;
+    padding-top: 120px;
     padding-bottom: 80px;
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+
+  .hero__content {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .hero__description {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__features {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__buttons {
+    width: 100%;
+  }
+
+  .hero__visual {
+    position: static;
+    width: 100%;
+    height: auto;
   }
 
   .compliance__header {
-    gap: 40px;
+    flex-direction: column;
+    height: auto;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .compliance__title,
+  .compliance__description {
+    width: 100%;
+    height: auto;
   }
 
   .compliance__title-arrow {
@@ -617,7 +779,16 @@ button {
   }
 
   .compliance__body {
+    flex-direction: column;
+    height: auto;
+    align-items: stretch;
     gap: 40px;
+  }
+
+  .compliance__illustration,
+  .compliance__cards {
+    width: 100%;
+    height: auto;
   }
 
   .hero__decoration-chevron {
@@ -662,13 +833,6 @@ button {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   }
 
-  .hero__bg-blur {
-    width: 300px;
-    height: 300px;
-    left: -100px;
-    top: 50px;
-  }
-
   .navbar__inner {
     height: var(--navbar-height-mobile);
   }
@@ -683,6 +847,7 @@ button {
 
   .hero {
     padding-top: 0;
+    height: auto;
   }
 
   .hero__inner {
@@ -691,6 +856,8 @@ button {
     padding-top: 40px;
     padding-bottom: 60px;
     text-align: center;
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
   }
 
   .hero__content {
@@ -729,19 +896,12 @@ button {
   }
 
   .compliance__header {
-    grid-template-columns: 1fr;
     text-align: center;
-    gap: 20px;
   }
 
   .compliance__description {
     max-width: 600px;
     margin: 0 auto;
-  }
-
-  .compliance__body {
-    grid-template-columns: 1fr;
-    gap: 50px;
   }
 
   .compliance__illustration {
@@ -775,6 +935,13 @@ button {
 
   .mobile-menu__link {
     font-size: 19px; /* Mobile Title link */
+  }
+
+  .hero__bg-blur {
+    width: 300px;
+    height: 300px;
+    left: -100px;
+    top: 50px;
   }
 }
 
