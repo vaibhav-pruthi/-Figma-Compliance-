@@ -406,8 +406,9 @@ button {
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 18px; /* Body Regular / Medium */
-  line-height: 32px;
+  font-size: 18px; /* Body Medium */
+  font-weight: 500;
+  line-height: normal;
   color: var(--color-text-muted);
 }
 
