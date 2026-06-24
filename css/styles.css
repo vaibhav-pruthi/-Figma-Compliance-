@@ -442,15 +442,6 @@ button {
   object-fit: contain;
 }
 
-.hero__decoration-chevron {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 138px;
-  height: auto;
-  z-index: 3;
-  pointer-events: none;
-}
 
 /* ==========================================================================
    Compliance Section
@@ -482,15 +473,15 @@ button {
   line-height: 70px;
   color: var(--color-text);
   position: relative;
+  display: inline-block;
 }
 
 .compliance__title-arrow {
   position: absolute;
-  left: 48%;
-  top: 80%;
+  right: -30px;
+  top: 95%;
   width: 36px;
-  height: 129px;
-  transform: translateX(-50%);
+  height: auto;
   pointer-events: none;
   z-index: 10;
 }
@@ -517,22 +508,30 @@ button {
   align-items: center;
 }
 
+.compliance__illustration-wrapper {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
 .compliance__illustration-img {
+  display: block;
   width: 100%;
   height: auto;
   max-width: 100%;
-  object-fit: contain;
 }
 
-.compliance__illustration-chevron {
+.compliance__illustration-chevrons {
   position: absolute;
-  bottom: -20px;
-  left: -20px;
-  width: 138px;
+  left: -10%;
+  bottom: -10%;
+  width: 19.49%;
   height: auto;
-  z-index: 3;
   pointer-events: none;
 }
+
 
 .compliance__cards {
   display: flex;
@@ -632,28 +631,17 @@ button {
   }
 
   .compliance__title-arrow {
-    display: block;
     width: 28px;
-    height: auto;
-    left: 48%;
-    top: 75%;
+    right: -25px;
+    top: 95%;
   }
 
   .compliance__body {
     gap: 40px;
   }
 
-  .hero__decoration-chevron {
-    width: 100px;
-    top: -10px;
-    left: -10px;
-  }
 
-  .compliance__illustration-chevron {
-    width: 100px;
-    bottom: -10px;
-    left: -10px;
-  }
+
 
   .hero__bg-blur {
     width: 500px;
@@ -743,9 +731,7 @@ button {
     margin: 0 auto;
   }
 
-  .hero__decoration-chevron {
-    display: none; /* Hide decoration on small screens to prevent overflows */
-  }
+
 
   .compliance {
     padding: 60px 0;
@@ -772,21 +758,11 @@ button {
     margin: 0 auto;
   }
 
-  .compliance__illustration-chevron {
-    display: block;
-    width: 80px;
-    bottom: -10px;
-    left: -10px;
-  }
 
   .compliance__title-arrow {
-    display: block;
-    width: 24px;
-    height: auto;
-    left: 50%;
-    top: 100%;
-    margin-top: 10px;
-    transform: translateX(-50%);
+    width: 22px;
+    right: -20px;
+    top: 95%;
   }
 
   .feature-card {
