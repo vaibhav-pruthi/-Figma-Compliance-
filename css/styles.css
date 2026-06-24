@@ -632,7 +632,11 @@ button {
   }
 
   .compliance__title-arrow {
-    display: none; /* Hide curly arrow to prevent overlap when grids adjust */
+    display: block;
+    width: 28px;
+    height: auto;
+    left: 48%;
+    top: 75%;
   }
 
   .compliance__body {
@@ -769,7 +773,20 @@ button {
   }
 
   .compliance__illustration-chevron {
-    display: none; /* Hide chevron to prevent edge overflow on mobile */
+    display: block;
+    width: 80px;
+    bottom: -10px;
+    left: -10px;
+  }
+
+  .compliance__title-arrow {
+    display: block;
+    width: 24px;
+    height: auto;
+    left: 50%;
+    top: 100%;
+    margin-top: 10px;
+    transform: translateX(-50%);
   }
 
   .feature-card {
