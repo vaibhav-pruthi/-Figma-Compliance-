@@ -130,7 +130,9 @@ button {
 }
 
 .btn--outline:hover {
-  background: rgba(67, 86, 214, 0.06);
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
   transform: translateY(-1px);
 }
 
@@ -142,6 +144,22 @@ button {
   flex-shrink: 0;
   width: 26px;
   height: 26px;
+}
+
+.btn__icon--hover-only {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-right: -10px; /* Offset the 10px flex gap on .btn */
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              margin-right 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover .btn__icon--hover-only {
+  width: 26px;
+  opacity: 1;
+  margin-right: 0;
 }
 
 /* ==========================================================================
